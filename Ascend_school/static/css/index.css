@@ -1,0 +1,127 @@
+.body{
+    margin: 0;
+}
+.main{
+    background-color:rgb(148, 205, 255);
+    height: 270vh;
+    width: 100%;
+}.head-bar{
+    background-color: rgb(27, 49, 49);
+    text-align: right;
+    padding: 5px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.head-bar a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.head-bar a:hover{
+    color: brown;
+    transform: scale(1.2);
+}
+.top{
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+    margin: 0px;
+    
+}
+.top-body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(60, 163, 79);
+    margin: 0px;
+    background-size: cover;
+}
+.top-mid{
+    padding-top: 200px;
+}
+.top-mid h1{
+    margin: 0px;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+}
+.top-mid p{
+    color: black;
+    width: 600px;
+    
+}
+.top-mid button{
+    width: 200px;
+    padding: 10px;
+    font-size:large;
+    border-radius: 25px;
+    background-color: rgba(246, 160, 110, 0.734);
+    color: rgb(0, 0, 0);
+    margin-top: 60px;
+}
+.top-mid button:hover{
+    background-color: green;
+}
+.mid{
+    background-image:linear-gradient(rgb(255, 255, 255),rgb(148, 205, 255));
+    height: 100vh;
+    width: 100%;
+    
+    padding-bottom:10px;
+}
+.inner-mid{
+    width: 68%;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 30px;
+
+}
+.pro-mid{
+
+    text-align:center;
+    margin-right: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}
+.pro-mid img{
+    width: 500px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    background-size: contain;
+    margin-left: 50%;
+    
+
+}
+.mid h1{
+    font-size: 40px;
+}
+.inner-mid p{
+    padding-bottom: 40px;
+    text-align: justify;   
+}
+.footer{
+    background-color: rgb(227, 236, 236);
+    padding-bottom: 10px;
+}
+.footer-details{
+    background-color: rgb(190, 201, 199);
+    max-width: 400px;
+    margin-left: 2px;
+    
+}
+.footer input{
+    padding-top: 20px;
+    padding: 10px;
+    
+}
+.footer button{
+    background-color: rgb(255, 193, 23);
+    margin-bottom: 50px;
+}
+
+
+
+
+  
+  

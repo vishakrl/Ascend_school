@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <div class="main">
+     <div class="top">
+       <div class="head-bar">
+                <a href="">Home</a>
+                <a href="about/">About</a>
+                {% if user.is_staff %}
+                <a href="">{{user.username}}</a>
+                <a class="" href="logout/">Logout</a>
+                <a href="adm/">Admission</a>
+                <a href="table/">Display</a>
+                
+                
+                
+                {% elif user.is_authenticated %}
+                <a href="">{{user.username}}</a>
+                
+                
+                
+                   
+                      <a class="" href="logout/">Logout</a>
+                 
+                 {% else %}
+                
+
+                   <a class="" href="log/">Login</a>
+                
+               
+               
+                
+                   <a class="" href="reg/">Register</a>
+                {% endif %}
+                
+                
+
+
+
+            </div>
+            <div class="top-body" style="background-image: url('/static/images/school4.jpg');">
+                <center>
+                    <div class="top-mid">
+                        <h1>Ascend Higher Secondary School</h1>
+                        <p>Design templates are pre-made designs and documents that can be customized. Templates are
+                            often designed to meet specific standards or specs so they're consistent between users and
+                            mediums. You can use pre-designed templates from template libraries and websites or create
+                            custom templates for future use.
+
+                        </p>
+
+                        <!-- <button>Sign in</button>  -->
+                    </div>
+                </center>
+            </div>
+        </div>
+        <div class="mid"> 
+            <center>
+            <h1 style="position: relative; left: -450px; top: 100px;">About us </h1>
+            
+            </center>
+            <div class="inner-mid">
+                <p>Secondary education helps children to prepare themselves for their future choices of going to either college or university.
+                     It encourages knowledge and information sharing, research and transformation and also provides students with the skills needed to meet the ever-changing markets.
+                     Higher education is a rich cultural and scientific asset which enables personal development and promotes economic, technological and social change.
+                       It promotes the exchange of knowledge, research and innovation and equips students with the skills needed to meet ever changing labour markets.</p>
+                <div class="pro-mid">
+                    <img src="{% static 'images/school6.jpg' %}" alt="">
+
+                </div>
+                
+
+            </div>
+
+        </div>
+        
+         <div class="footer">
+       
+            <h1>Contact Us</h1>
+            
+            <div class="footer-details">
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Your name"><br>
+            
+                    <label for="email">Email Id:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Your email id"><br>
+            
+                    <label for="phone">Phone:</label><br>
+                    <input type="text" id="phone" name="phone" placeholder="Your number"><br>
+                    <label for="">Message</label><br>
+                    <textarea name="" id="" cols="50" rows="10" placeholder="write something"></textarea><br>
+            
+                    <br>&nbsp;&nbsp;<button type="button">Submit</button>
+                    </form>
+            </div>
+            
+        </div>
+
+
+    
+
+
+
+
+
+    </div>
+</body>
+</html>
