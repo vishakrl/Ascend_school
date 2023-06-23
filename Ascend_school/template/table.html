@@ -19,11 +19,17 @@
         }
         
         tr:nth-child(odd) {
-          background-color: #eae7e7;
+          background-color:lightgray;
         }
         button{
-            
+          height: 30px; 
+          width: auto;
+           border-radius: 10px;
+            border: none; 
+            border-bottom: 3px solid black; 
+            background-color:   rgba(72, 112, 147, 0.805);color: rgb(0, 0, 0);
         }
+        
     </style>
 
 </head>
@@ -32,11 +38,10 @@
 <p>Admission details of Academic year 2023-24</p>
 
 <label for="filter">Filter details by:</label>
-<button style="height: 30px; width: auto; border-radius: 10px; border: none; border-bottom: 3px solid black; background-color:  rgb(211, 114, 114);color: rgb(0, 0, 0);">All</button>
-<button style="height: 30px; width: auto; border-radius: 10px; border: none; border-bottom: 3px solid black; background-color: rgb(211, 114, 114);color: rgb(0, 0, 0);">Science</button>
-<button style="height: 30px; width: auto; border-radius: 10px; border: none; border-bottom: 3px solid black; background-color:  rgb(211, 114, 114);color: rgb(0, 0, 0);">Commerce</button>
-<button style="height: 30px; width: auto; border-radius: 10px; border: none; border-bottom: 3px solid black; background-color: rgb(211, 114, 114);color: rgb(0, 0, 0);">Humanities</button>
-
+<a href=""><button>All</button></a>
+<a href="table_s/"><button>Science</button></a>
+<a href="table_c/"><button>Commerce</button></a>
+<a href="table_h/"><button>Humanities</button></a>
 
 <table>
   <tr>
@@ -49,37 +54,19 @@
     <th>Date_of_Birth</th>
     <th>Contact_details</th>
   </tr>
+  {% for i in data %}
   <tr>
-    <td>101</td>
-    <td>Ajith</td>
-    <td>23</td>
-    <td>pattom</td>
-    <td>Science</td>
-    <td>Rajesh</td>
-    <td>10-03-2002</td>
-    <td>34577785</td>
+    <td>{{i.admission_no}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.age}}</td>
+    <td>{{i.place}}</td>
+    <td>{{i.subject}}</td>
+    <td>{{i.guardian_name}}</td>
+    <td>{{i.date_of_birth}}</td>
+    <td>{{i.contact_detais}}</td>
   </tr>
-  <tr>
-    <td>102</td>
-    <td>Ajith</td>
-    <td>23</td>
-    <td>pattom</td>
-    <td>Science</td>
-    <td>Ravi</td>
-    
-    <td>10-03-2002</td>
-    <td>34577785</td>
-  </tr>
-  <tr>
-    <td>102</td>
-    <td>Ajith</td>
-    <td>23</td>
-    <td>pattom</td>
-    <td>Science</td>
-    <td>Ramu</td>
-    <td>10-03-2002</td>
-    <td>34577785</td>
-  </tr>
+  {% endfor %}
+ 
   
 </table> 
 </body>

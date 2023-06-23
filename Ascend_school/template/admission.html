@@ -14,7 +14,7 @@
             border-radius: 30px;
             background-color: rgba(72, 112, 147, 0.805);
             margin-top: 20px;
-            height:700px;
+            height:800px;
         }
         .main h1{
             margin-left: 5px;
@@ -58,37 +58,41 @@
 <body>
     <div class="main">
         <h1>Student Admission</h1>
+        <font color="red">{{msg}}</font>
         <div class="pg-details">
-            <form action="">
-
-            <label for="Adm_no">Admission No:</label><br>
-            <input type="number" placeholder="Enter Admission number"><br>
+            <form action="{% url 'admissionpage' %}" method="post">
+                {% csrf_token %}
+                
+            <label for="">Admission No:</label><br>
+            <input name="ad_no" type="number" placeholder="Enter Admission number"><br>
 
             <label for="name">Name :</label><br>
-            <input type="text" placeholder="Enter name"><br>
+            <input name="name" type="text" placeholder="Enter name"><br>
 
-            <label for="">Age</label><br>
-            <input type="number" placeholder="Enter age"><br>
+            <label for="age">Age</label><br>
+            <input name="age" type="number" placeholder="Enter age"><br>
             
             <label for="place">Place :</label><br>
-            <input type="text" placeholder="Enter Place"><br>
+            <input name="place" type="text" placeholder="Enter Place"><br>
             
             <label for="Subject">Subject :</label><br>
             <select name="subject" id="">
-                <option value="">Science</option>
-                <option value="">Commerce</option>
-                <option value="">Humanities</option>
+                <option value=""></option>
+                {% for i in sdata %}
+                
+                <option value="{{i.name}}">{{i.name}}</option>
+                {% endfor %}
             </select><br>
             
             
             <label for="Gname">Guardian name :</label><br>
-            <input type="text" placeholder="Enter Guardians name"><br>
+            <input name="gname" type="text" placeholder="Enter Guardians name"><br>
             
             <label for="dob">Date of Birth :</label><br>
-            <input type="date" placeholder="Enter name"><br>
+            <input name="dob" type="date" placeholder="Enter name"><br>
             
             <label for="Ctno">Contact No:</label><br>
-            <input type="text" placeholder="Enter Contact Details"><br>
+            <input name="ctno" type="text" placeholder="Enter Contact Details"><br>
 
             <button type="submit">Submit</button>
 

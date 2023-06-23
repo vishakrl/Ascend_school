@@ -5,13 +5,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Our School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style>
+        p{
+            font-size: large;
+            color: rgba(0, 0, 0, 0.964);
+        }
+        .card{
+            margin: 0;
+            padding: 0;
+            font-family: 'montserrat',sans-serif;
+            box-sizing: border-box;
+            
+
+        }
+        .body{
+            
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f1f1;
+        }
+        .contact-info{
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .card{
+            background:#2f3542;
+            padding: 0 20px;
+            margin: 0 10px;
+            margin-top: 141px;
+            width: calc(28% - 5px);
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            cursor: pointer;
+            
+        }
+        .card p{
+            color: #fff;
+            margin-top: 20px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            max-height: 0;
+            opacity: 0;
+            transition: 0.3s linear;
+
+        }
+        .card-icon{
+            font-size: 28px;
+            background: #ff6348;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px !important;
+            border-radius: 50%;
+            transition: 0.3s linear;
+        }
+        .card:hover .card-icon{
+            background: none;
+            color: #ff6348;
+            transform: scale(1.6);
+        }
+        .card:hover p{
+            max-height: 40px;
+            opacity: 1;
+        }
+        
+            
+        
+
+        @media screen and (max-width:800px) {
+            .contact-info{
+                flex-direction: column;
+            }
+            .card{
+                width: 100px;
+                max-width: 300px;
+                margin: 10px 0;
+            }
+            
+        }
+
+       
+    </style>
 </head>
 <body background="{% static 'images/school20.jpg' %}"height="400px" width="500px">
-    <h1>History of Ascend School</h1>
-    <p>A school is an educational institution designed to provide learning spaces and learning environments for the teaching of students under the direction of teachers. Most countries have systems of formal education, which is sometimes compulsory.[2] In these systems, students progress through a series of schools.<br>
-        The names for these schools vary by country (discussed in the Regional terms section below) but generally include primary school for young children and secondary school for teenagers who have completed primary education. An institution where higher education is taught is commonly called a university college or university.<br>
-        In addition to these core schools, students in a given country may also attend schools before and after primary (elementary in the U.S.) and secondary (middle school in the U.S.) education.[3] Kindergarten or preschool provide some schooling to very young children (typically ages 3–5).<br>
-        University, vocational school, college or seminary may be available after secondary school. A school may be dedicated to one particular field, such as a school of economics or dance. Alternative schools may provide nontraditional curriculum and methods.</p>
-    
+   
+    <h1>About us</h1>
+    <p>School is the place where we learn to read and write. It is the most crucial place for a student, and it helps us to learn new things. The teachers are always helpful and teach us important things in life. We must always be regular to school as missing classes can lead to problems during exams. Schools teach us how to be consistent, punctual, and obedient. It also makes us better human beings so that we can treat our elders with respect. 
+        Most of what we learn is a result of the learning imparted by our teachers.The foundations of our learning are laid by our schools. School is the place that instills in us a sense of responsibility and hardworking spirit. We become better versions of ourselves through the rigorous tests that we are put through at schools. Each exam, each activity, and each lesson is aimed towards making us learn and grow.
+         Right from the beginning, we are taught to be morally responsible for all our actions.All great men have been taught to read and write at their schools. It is our school that endows us with the right values at an early age. We teach a set of strong moral values that serve us later in our lives. School life is the period that makes up most of your childhood memories. We learn to laugh, cry, share, and support by co-habiting with our classmates. 
+         Schools are the framework that builds our moral characters and serves as a pathway that we must follow to achieve our dreams.The initial years pass like a breeze and are the best years of our school life but, the advanced grades teach us that life is not always easy. We fail in tests, we stay awake at nights to finish assignments, we get scolded by teachers, but most importantly, we learn how to cope up with the hardships that life throws at us. Schools have a tremendous responsibility in shaping the minds of millions of young minds that are as soft as wet mud. The teachers are excellent potters who mold us so that the resultant figure is ready to bear the weight of life without cracking. 
+         Even if the later stages of school life feel like a burden, we must remember that our school’s happiest times have been spent.Secondary education helps children to prepare themselves for their future choices of going to either college or university.
+         It encourages knowledge and information sharing, research and transformation and also provides students with the skills needed to meet the ever-changing markets.
+         Higher education is a rich cultural and scientific asset which enables personal development and promotes economic, technological and social change.
+           It promotes the exchange of knowledge, research and innovation and equips students with the skills needed to meet ever changing labour markets</p>
+      <div class="contact-info">
+        <div class="card">
+            <i class="card-icon far fa-envelope"></i>
+            <p>email@Ascent.com</p>
+        </div>
+        <div class="card">
+            <i class="card-icon fas fa-phone"></i>
+            <p>+8086000653</p>
+        </div>
+        <div class="card">
+            <i class="card-icon fas fa-map-marker-alt"></i>
+            <p>Trivandrum,INDIA</p>
+        </div>
+
+      </div>  
 </body>
 </html>

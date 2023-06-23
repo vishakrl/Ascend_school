@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table view tab</title>
+
+    <style>
+        button{
+            height: 30px; 
+            width: auto; 
+            border-radius: 10px; 
+            border: none; 
+            border-bottom: 3px solid black;
+            background-color: red;
+            color: azure;  
+        }
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          width: 100%;
+          border: 1px solid #ddd;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 15px;
+        }
+        
+        tr:nth-child(odd) {
+          background-color: #eae7e7;
+        }
+        a {
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          float: left;
+          color: #1b0c0c;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        a:hover {
+          background-color: #f5f063;
+          color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>ADMISSION DETAILS</h2>
+<p>Admission details of Students in Academic year 2023-24</p>
+<label for="filter">Filtered details of <b>science</b> students:</label><br>
+
+<!-- <div class="filter">
+<a href="">All</a>
+<a href="test_s/">Science</a>
+<a href="test_c/">Commerce</a>
+<a href="test_h/">Humanities</a>
+</div> -->
+
+
+<table>
+  <tr>
+    <th>Admission_id</th>
+    <th>Name of student</th>
+    <th>Place</th>
+    <th>Age</th>
+    <th>Subject</th>
+    <th>Guardian_name</th>
+    <th>Date_of_Birth</th>
+    <th>Contact_details</th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{i.admission_no}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.age}}</td>
+    <td>{{i.place}}</td>
+    <td>{{i.subject}}</td>
+    <td>{{i.guardian_name}}</td>
+    <td>{{i.date_of_birth}}</td>
+    <td>{{i.contact_detais}}</td>
+  </tr>
+  {% endfor %}
+</table> 
+
+
+
+</body>
+</html>

@@ -25,7 +25,11 @@ urlpatterns = [
     path('reg/',views.register,name='registerpage'),
     path('logout/',views.logout),
     path('about/',views.about),
-    path('adm/',views.admission),
+    path('admit/',views.admission,name='admissionpage'),
     path('table/',views.table),
+    path('table/table_s/',views.testsub_s),
+    path('table/table_c/',views.testsub_c),
+    path('table/table_h/',views.testsub_h),
+    
 
 ]
